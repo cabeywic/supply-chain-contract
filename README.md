@@ -2,7 +2,7 @@
 # Supply Chain Management Contract
 
 This project is a proof of concept application, to demonstrate the use of smart contracts to improve supply chain management. 
-This applications allows producers to create a product, and consumers to track the transfer ownership of the product.
+This applications allows producers to create a product, and consumers to track the transfer of ownership of the product.
 
 
 

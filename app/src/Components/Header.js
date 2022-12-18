@@ -25,7 +25,7 @@ export default function Header() {
               </Typography>
                 <Stack spacing={2} direction="row">
                     <Link href="/" style={{textDecoration: 'none'}}><Button color="primary" variant="contained">Find Products</Button></Link>
-                    <Link href="/" style={{textDecoration: 'none'}}><Button color="primary" variant="contained">Create Products</Button></Link>
+                    <Link href="/" style={{textDecoration: 'none'}}><Button color="primary" variant="contained">Create Product</Button></Link>
                 </Stack>
             </Toolbar>
         </AppBar>
