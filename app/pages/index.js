@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Typography, Grid, Box, Paper, IconButton, InputBase, CardContent } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
 import Layout from '../src/Components/Layout';
 import ProductCard from '../src/Components/ProductCard';
 import ProductOwnershipTable from '../src/Components/ProductOwnershipTable';
@@ -45,6 +46,7 @@ class Index extends React.Component {
 
   render() {
     const isActive = true
+    const isOwner = false
     return (
       <Layout maxWidth="sm">
         <Box sx={{ my: 4 }}>
@@ -54,16 +56,30 @@ class Index extends React.Component {
           {this.renderProductSearchBox()}
           <Grid container spacing={2} sx={{ my: 4 }}>
             <Grid item xs={4}>
-              <ProductCard 
+            <ProductCard 
               productName={"100ml Water Bottle"} 
               createdAt={1671383826}
               updatedAt={1671383826}
               owner={"Charaka"}
               isActive={isActive.toString()}
-              />
+            />
             </Grid>
             <Grid item xs={8}>
               <ProductOwnershipTable rows={rows}/>
+              {/* TODO: Transfer Ownership Button */}
+              <Paper
+                component="form"
+                sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: '100%', my: 2 }}
+              >
+                <InputBase
+                  sx={{ ml: 1, flex: 1 }}
+                  placeholder="New Product Owner Address"
+                  inputProps={{ 'aria-label': 'Transfer product ownership' }}
+                />
+                <IconButton type="button" sx={{ p: '10px' }} aria-label="search" disabled={!isOwner}>
+                  <SwapHorizIcon />
+                </IconButton>
+              </Paper>
             </Grid>
           </Grid>
         </Box>

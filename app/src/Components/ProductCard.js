@@ -4,10 +4,10 @@ import { convertUnixTStoStr } from '../config/helper'
 
 
 function ProductCard(props) {
-    const {productName, createdAt, updatedAt, owner, isActive} = props;
+    const {productName, createdAt, updatedAt, owner, isActive, sx} = props;
 
     return(
-        <Paper>
+        <Paper sx={sx}>
             <CardContent>
                 <Typography variant="h5" component="div" sx={{color: "text.primary"}}>
                 Product Details
