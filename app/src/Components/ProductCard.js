@@ -4,7 +4,9 @@ import { convertUnixTStoStr } from '../config/helper'
 
 
 function ProductCard(props) {
-    const {productName, createdAt, updatedAt, owner, isActive, sx} = props;
+    const { sx } = props;
+    const { name, createdAt, updatedAt, owner, isActive } = props.product
+
 
     return(
         <Paper sx={sx}>
@@ -13,7 +15,7 @@ function ProductCard(props) {
                 Product Details
                 </Typography>
                 <Typography variant="body" component="h4" sx={{color: "text.secondary"}}>
-                Product Name: {productName}
+                Product Name: {name}
                 </Typography>
                 <Typography variant="body" component="h4" sx={{color: "text.secondary"}}>
                 Created At: {convertUnixTStoStr(createdAt)}
@@ -22,10 +24,13 @@ function ProductCard(props) {
                 Updated At: {convertUnixTStoStr(updatedAt)}
                 </Typography>
                 <Typography variant="body" component="h4" sx={{color: "text.secondary"}}>
-                Owner: {owner}
+                Owner: 
+                </Typography>
+                <Typography variant="body" component="h5" sx={{color: "text.secondary"}}>
+                {owner} 
                 </Typography>
                 <Typography variant="body" component="h4" sx={{color: "text.secondary"}}>
-                Active: {isActive} 
+                Active: {isActive.toString()} 
                 </Typography>
             </CardContent>
         </Paper>

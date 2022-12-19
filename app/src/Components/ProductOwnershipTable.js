@@ -24,8 +24,8 @@ function ProductOwnershipTable(props){
                 <Table aria-label="Ownership table">
                     <TableHead>
                     <TableRow>
-                        <TableCell>Updated At</TableCell>
-                        <TableCell align="right">Owner</TableCell>
+                        <TableCell>Owner</TableCell>
+                        <TableCell align="right">Updated At</TableCell>
                     </TableRow>
                     </TableHead>
                     <TableBody>
