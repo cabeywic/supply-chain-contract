@@ -71,6 +71,7 @@ contract SupplyChain {
         products[id] = Product(_name, block.timestamp, block.timestamp, msg.sender, true);
         // Emit an event to let clients know that the product was created
         emit ProductUpdated(id, _name, block.timestamp, block.timestamp, msg.sender, true);
+        emit ProductOwnershipTransfered(id, _name, msg.sender, block.timestamp);
     }
 
     // Function to update a product
