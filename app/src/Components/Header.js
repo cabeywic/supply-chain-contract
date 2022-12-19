@@ -21,7 +21,7 @@ export default function Header() {
         <AppBar position="static" color="transparent">
             <Toolbar>
               <Typography variant="h5" component="h1" sx={styles.title}>
-                  Supply Chain Audit App
+                  Supply Chain Audit Trail App
               </Typography>
                 <Stack spacing={2} direction="row">
                     <Link href="/" style={{textDecoration: 'none'}}><Button color="primary" variant="contained">Find Products</Button></Link>
